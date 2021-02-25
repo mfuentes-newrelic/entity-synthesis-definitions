@@ -1,6 +1,5 @@
 cumulativeCpuUtilization:
   title: Cumulative CPU utilization over 60s
-  unit: SECONDS
   query:
     select: average(`node.cpu.coreUsageTime`)
     from: GcpKubernetesNodeSample
@@ -8,7 +7,6 @@ cumulativeCpuUtilization:
     eventId: entityGuid
 nodeMemoryUsage:
   title: Node memory usage
-  unit: BYTES
   query:
     select: average(`node.memory.usedBytes`)
     from: GcpKubernetesNodeSample

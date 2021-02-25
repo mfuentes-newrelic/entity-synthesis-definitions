@@ -1,8 +1,13 @@
 domain: INFRA
 type: GCPPUBSUBSUBSCRIPTION
+goldenTags:
+- gcp.zone
+- gcp.projectId
+- account
 compositeMetrics:
   summaryMetrics:
   - summary_metrics.yml
+  - golden_metrics.yml
 configuration:
   entityExpirationTime: DAILY
   alertable: true
